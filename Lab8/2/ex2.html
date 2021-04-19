@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+	<meta charset="utf-8">
+	<title>Ex 2: Slide show</title>
+	</head>
+	<body>
+		<h1><center>Ex2</center></h1>
+		<img src="1.jpg" id="MySlides" width="1920" height="1080">
+		<script type="text/javascript">
+			var page = 0;
+			var sild = document.getElementById('MySlides');
+			var pic = ["1.jpg","2.jpg","3.jpg","4.jpg","5.jpg"];
+			function Next(){
+				page++;
+				if(page === pic.length){
+					page = 0;
+				}
+				sild.setAttribute("src", pic[page]);
+			}
+			function Previous(){
+				page--;
+				if (page === -1){
+					page = pic.length-1;
+				}
+				sild.setAttribute("src", pic[webkitConvertPointFromPageToNode]);
+			}
+		</script>
+		<button onclick="Previous()">Previous</button>
+		<button onclick="Next()">Next</button>
+	</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Ex1: Password validator</title>
+	</head>
+	<script >
+	main= function () {
+	var  psd= document.getElementById("psd").value;
+	var  con = document.getElementById("con").value;
+	var  print;
+	if(psd.length < 8) {
+	print = "Eror";
+	}
+	else if (psd != con) {
+	print = "Eror";
+	}
+	else if (psd === con){
+	print = "Ture";
+	}
+	document.getElementById("print").innerHTML = print;
+	}
+
+	</script>
+
+	<body>
+		<h1>Password Here</h1>
+		Password: <input type="text" id ="psd" value=""/><br>
+		Confirm: <input type="text" id ="con" value=""/><br>
+		<input type="button" onclick="main()" value="Validate"/>
+		<div id="print"></div>
+	</body>
+</html>

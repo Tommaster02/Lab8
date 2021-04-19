@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Ex4</title>
+  </head>
+  <body>
+    <p id="ts" style="border:10px dashed">
+      TESTING The shy is the best top in the world
+    </p>
+    Boarder(00-ff):<br>
+      red value  :<input type="text" id = "bdr_r" value=""><br>
+      green value:<input type="text" id = "bdr_g" value=""><br>
+      blue value :<input type="text" id = "bdr_b" value=""><br>
+      width value(%):<input type="text" id = "bdr_w" value=""><br>
+    Background color(00-ff):<br>
+      red value  :<input type="text" name="" id = "bkgd_r" value=""><br>
+      green value:<input type="text" name="" id = "bkgd_g" value=""><br>
+      blue value :<input type="text" name="" id = "bkgd_b" value=""><br>
+    <button  id="m_btn" onclick="ChangeColor()">Change color</button>
+
+    <script type="text/javascript">
+  function ChangeColor(){
+    var bdr_r = document.getElementById('bdr_r').value;
+    var bdr_g = document.getElementById('bdr_g').value;
+    var bdr_b = document.getElementById('bdr_b').value;
+    var bdr_w = document.getElementById('bdr_w').value;
+    var bkgd_r = document.getElementById('bkgd_r').value;
+    var bkgd_g = document.getElementById('bkgd_g').value;
+    var bkgd_b = document.getElementById('bkgd_b').value;
+    var x = document.getElementById('ts');
+    var r =bdr_r.toString();
+    var g =bdr_g.toString();
+    var b =bdr_b.toString();
+    var gr =bkgd_r.toString();
+    var gg =bkgd_g.toString();
+    var gb =bkgd_b.toString();
+    x.style.borderColor = "#"+r+g+b;
+    x.style.width = bdr_w + '%' ;
+    x.style.backgroundColor = "#"+gr+gg+gb;
+  }
+</script>
+
+  </body>
+</html>
